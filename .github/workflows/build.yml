@@ -9,8 +9,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install pygame pyinstaller
-      - run: pyinstaller --onefile --noconsole kick.py
+      - run: pyinstaller --onefile --noconsole oyun.py
       - uses: actions/upload-artifact@v4
         with:
-          name: kick-exe
-          path: dist/kick.exe
+          name: oyun-exe
+          path: dist/oyun.exe
