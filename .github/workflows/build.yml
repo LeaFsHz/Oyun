@@ -8,9 +8,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install pygame pyinstaller
-      - run: pyinstaller --onefile --noconsole oyun.py
+      - run: pip install pygame websockets pyinstaller pillow
+      - run: pyinstaller --onefile --noconsole --name ORRVETH --icon=ikon.png --collect-submodules websockets oyun.py
       - uses: actions/upload-artifact@v4
         with:
-          name: oyun-exe
-          path: dist/oyun.exe
+          name: ORRVETH
+          path: dist/ORRVETH.exe
